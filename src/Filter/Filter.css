@@ -1,0 +1,88 @@
+.filter-container {
+  width: 250px;
+  height: 400px;
+  padding: 15px 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.filter-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.currency-switcher {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.currency-btn {
+  flex: 1;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.currency-btn.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.currency-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.custom-checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #908d8d57;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  background-color: #ffff;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.custom-checkbox-label:hover .custom-checkbox {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.custom-checkbox-input {
+  display: none; /* Скрываем стандартный чекбокс */
+}
+
+.custom-checkbox-input:checked + .custom-checkbox {
+  background-color: #ffffff;
+  border-color: rgb(13 82 234); /* Меняем цвет бордера при выборе */
+}
+
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid rgb(13 82 234);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox::after {
+  opacity: 1;
+}
